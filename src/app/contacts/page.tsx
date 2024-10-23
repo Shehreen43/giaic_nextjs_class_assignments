@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <section id="contact" className="py-12 bg-gradient-to-r from-cyan-400 to-gray-800 h-screen pt-24">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center text-white mb-6">Contact Us</h2>
+            <h2 className="text-cyan-500 text-[5vw] text-center mb-6 hover:text-cyan-200 hover:scale-110">Contact Us</h2>
             <form className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
               <div className="mb-4">
                 <label className="block text-gray-700 font-semibold mb-2" htmlFor="name">
