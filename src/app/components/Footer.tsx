@@ -8,8 +8,8 @@ export default function Footer() {
         {/* Footer Top */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <h3 className="text-xl font-bold">NextGen Creations</h3>
-            <p className="text-gray-400">copyright © {new Date().getFullYear()} All Rights Reserved</p>
+            <h3 className="text-xl font-bold hover:text-cyan-300">NextGen Creations</h3>
+            <p className="text-gray-400 hover:text-white">Copyright © {new Date().getFullYear()} All Rights Reserved</p>
           </div>
 
           {/* Social Media Links */}
@@ -37,11 +37,10 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-4">
           <p className="text-sm text-gray-400">
-            Designed by <span className="font-bold">Shehreen</span>
+            Designed by <span className="font-bold hover:text-cyan-300 transition-colors">Shehreen</span>
           </p>
           <nav className="mt-4 md:mt-0">
             <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors mx-4">Privacy Policy</Link>
-
             <Link href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors mx-4">Terms of Service </Link>
             <Link href="/contact" className="text-gray-400 hover:text-white transition-colors mx-4">Contact</Link>
           </nav>
