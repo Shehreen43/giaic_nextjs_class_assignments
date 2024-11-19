@@ -10,7 +10,7 @@ export default function Navbar() {
         </Link>
 
         <div className="w-[321px] h-[22px]">
-          <ul className=" text-gray-600 font-satoshi md:flex space-x-4  text-[16px] font-normal leading-[21.6px] underline-from-font decoration-skip-ink-none">
+          <ul className="hidden text-gray-600 font-satoshi md:flex space-x-4  text-[16px] font-normal leading-[21.6px] underline-from-font decoration-skip-ink-none">
             <li>
               <Link href="#" className="hover:text-black gap-1 flex flex-row">
                 Shop
