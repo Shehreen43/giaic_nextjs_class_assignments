@@ -59,7 +59,22 @@ export default function Hero() {
        <Image  src="/Vector.svg" alt="" width={104} height={104}  />
 </div>
 <div className="">
-<Image  src="/Fasion 1.png" alt="" width={1440} height={104}  />
+<Image  src="/Fasion 1.png" alt="" width={1440} height={663}  />
+</div>
+
+<div className="w-[1440px] h-[122px] top-[797px]  bg-black">
+<Image  src="/VERSACE.svg" alt="" width={166.48} height={33.16} className="absolute top-[841px] left-[100px]" />
+
+<Image  src="ZARA.svg" alt="" width={91} height={38} className="absolute top-[839px] left-[372.48px]" />
+
+<Image  src="GUCCI.svg" alt="" width={156} height={36} className="absolute top-[840px] left-[569.48px]" />
+
+<Image  src="PARADA.svg" alt="" width={194} height={32} className="absolute top-[842px] left-[831.48px]" />
+
+<Image  src="Calvin-Klein.svg" alt="" width={206.79} height={33.35} className="absolute top-[841px] left-[1131.48px]" />
+
+
+
 </div>
 
 
