@@ -9,8 +9,11 @@ export default function Home() {
     <>
     <TopHeader />
     <Navbar />
+    <main>
     <Hero />
     <New_Availabe />
+    </main>
+    
     </>
   )}
 
