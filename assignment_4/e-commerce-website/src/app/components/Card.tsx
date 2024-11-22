@@ -1,4 +1,5 @@
-import Image from "next/image";
+
+ import Image from "next/image";
 import Star from "./Star";
 
 interface CardProps {
@@ -12,7 +13,7 @@ interface CardProps {
   showDiscount?: boolean; // Optional: Flag to decide if discount is shown
 }
 
-export default function Card({
+const Card = ({
   imageSrc,
   title,
   rating,
@@ -21,8 +22,13 @@ export default function Card({
   discount = 0,
   showOriginalPrice = true, // Default to true if not passed
   showDiscount = true, // Default to true if not passed
-}: CardProps) {
+}: CardProps) => {
   const formattedPrice = price.toFixed(2);
+
+  // Calculate full stars and half stars
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+
 
   // Convert originalPrice and discount to numbers (if they are strings)
   const originalPriceNum = typeof originalPrice === "string" ? parseFloat(originalPrice) : originalPrice;
@@ -31,15 +37,18 @@ export default function Card({
   // Check if the originalPrice is a valid number
   const formattedOriginalPrice = !isNaN(originalPriceNum) ? originalPriceNum.toFixed(2) : null;
 
-   // Calculate full stars and half stars
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-
   return (
-    <div className="space-y-2">
-      <Image src={imageSrc} alt={title} width={295} height={298} className="rounded-[20px]" />
+    <div className="rounded-lg space-y-2">
+      <Image
+        src={imageSrc}
+        alt={title}
+        width={295}
+        height={298}
+        className="rounded-[20px]"
+      />
 
-      <p className="text-[15px] text-left">{title}</p>
+      <p className="font-satoshi text-[20px] leading-[27px] font-bold text-left pt-3">{title}</p>
+
       
       <div className="flex flex-row space-x-1  items-center">
          {/* Full Stars */}
@@ -50,94 +59,56 @@ export default function Card({
         {/* Half Star */}
         {hasHalfStar && <Image src="/Half_star.svg" alt="star" width={8.79} height={16.72} />}
                {/* Rating Value */}
-         <p className="text-[14px]">{rating}/5</p>
+         <p className="text-[14px]">{rating}<span className="opacity-40">/5</span></p>
      </div>
-      
-      <p className="text-[15px]  text-left">${formattedPrice}</p>
+      <div className="flex flex-row gap-2 font-satoshi text-[24px] font-bold leading-[32.4px] text-left">
+      <p>${formattedPrice}</p>
       
       {showOriginalPrice && formattedOriginalPrice && (
-        <p className="text-[15px] text-left">
-          <s>${formattedOriginalPrice}</s> 
+        <p>
+          <s className="opacity-40">${formattedOriginalPrice}</s> 
         </p>
       )}
 
       {showDiscount && discountNum > 0 && (
-        <p className="text-[15px] text-left">
-          <span>-{discountNum}%</span>
-        </p>
+         <p className="bg-red-200 text-red-500 font-satoshi text-[12px] font-medium leading-[16.2px] px-5 rounded-[62px] flex justify-center items-center text-center">
+         <span>-{discountNum}%</span>
+       </p>
       )}
+      </div>
     </div>
   );
 }
 
 
 
-// import Image from "next/image";
-// import Star from "./Star";
-
-// interface CardProps {
-//   imageSrc: string;
-//   title: string;
-//   rating: number;
-//   price: number;
-//   originalPrice?: number |string;
-//   discount?: number |string;
-// }
-
-// export default function Card({ imageSrc, title, rating, price,originalPrice = 0, discount= 0, }: CardProps) {
-
-//     const formattedPrice = price.toFixed(2);
-//     // Convert originalPrice and discount to numbers (if they are strings)
-//   const originalPriceNum = typeof originalPrice === "string" ? parseFloat(originalPrice) : originalPrice;
-//   const discountNum = typeof discount === "string" ? parseFloat(discount) : discount;
-
-//   // Check if the originalPrice is a valid number
-//   const formattedOriginalPrice = !isNaN(originalPriceNum) ? originalPriceNum.toFixed(2) : null;
+interface CARD{
+  title: string;
+  imageSrc: string
+}
+const Card2 = ({ title, imageSrc }: CARD) => {
+  return (
+    <div className="relative group">
+      {/* Image */}
+      <Image
+        src={imageSrc}
+        alt={title}
+        width={400}
+        height={300}
+        className="w-full h-auto rounded-lg object-cover"
+      />
+      {/* Title */}
+      <p className="absolute bottom-3 left-3 text-black font-medium text-[16px] leading-[21.6px] font-satoshi">
+        {title}
+      </p>
+    </div>
 
     
-//   // Calculate full stars and half stars
-//   const fullStars = Math.floor(rating);
-//   const hasHalfStar = rating % 1 !== 0;
+  );
+}
 
-//   return (
-//     <div className="space-y-2">
-//       {/* Dynamic Image */}
-//       <Image src={imageSrc} alt={title} width={295} height={298} className="rounded-[20px]" />
 
-//       {/* Title */}
-//       <p className="text-[15px] text-left">{title}</p>
-
-//       {/* Rating */}
-//       <div className="flex flex-row space-x-1  items-center">
-//         {/* Full Stars */}
-//         {Array.from({ length: fullStars }).map((_, index) => (
-//           <Star key={index} />
-//         ))}
-
-//         {/* Half Star */}
-//         {hasHalfStar && <Image src="/Half_star.svg" alt="star" width={8.79} height={16.72} />}
-
-//         {/* Rating Value */}
-//         <p className="text-[14px]">{rating}/5</p>
-//       </div>
-
-//       {/* Price */}
-//       <p className="text-[15px] mt-[-25px] text-left">${formattedPrice}</p>
-      
-//       {formattedOriginalPrice && (
-//         <p className="text-[15px] mt-[-25px] text-left">
-//           <s>${formattedOriginalPrice}</s><span>-{discountNum}%</span>
-//         </p>
-//       )}
-//       {/* <p className="text-[15px] text-left">${price}</p> */}
-//       {/* <p className="text-[15px] mt-[-25px] text-left">${formattedPrice}</p>
-      
-//       <p className="text-[15px] mt-[-25px] text-left">
-//         <s>{formattedOriginalPrice}</s>{" "}<span>{discount}</span> */}
-//       {/* </p> */}
-//     </div>
-//   );
-// }
+export default Card; Card2;
 
 
 
@@ -145,27 +116,4 @@ export default function Card({
 
 
 
-//  import Image from "next/image";
-// import Star from "./Star";
 
-// export default function Card(){
-//     return (
-//         <>
-//         <div className="w-[1440px] top-[114px] left-[100px]flex flex-cols space-x-1">
-//         <Image  src="/img1.png" alt="" width={295} height={298} className=" rounded-[20px]" />
-
-//         <p className="  text-[15px] text-left">
-//            T-shirt with Tape Details
-//         </p>
-//        <div className="flex flex-row space-x-1 mt-[-25px]">
-//         <Star /> <Star /> <Star /> <Star /> 
-//         <Image src="/Half_star.svg" alt="star" width={8.79} height={16.72} />
-//         <p className="text-[14px]">4.5/5</p>
-//        </div>
- //      <p className="text-[15px] mt-[-25px] text-left">$120<p><s>$260</s> <span>-20%</span></p>
- //     <p>Now only $ 1000</p></p>
-             
-//         </div>
-//         </>
-//     )
-// }
