@@ -13,7 +13,7 @@ interface CardProps {
   showDiscount?: boolean; // Optional: Flag to decide if discount is shown
 }
 
-const Card = ({
+export default function Card ({
   imageSrc,
   title,
   rating,
@@ -22,8 +22,8 @@ const Card = ({
   discount = 0,
   showOriginalPrice = true, // Default to true if not passed
   showDiscount = true, // Default to true if not passed
-}: CardProps) => {
-  const formattedPrice = price.toFixed(2);
+}: CardProps) {
+  const formattedPrice = price.toFixed();
 
   // Calculate full stars and half stars
   const fullStars = Math.floor(rating);
@@ -35,7 +35,7 @@ const Card = ({
   const discountNum = typeof discount === "string" ? parseFloat(discount) : discount;
 
   // Check if the originalPrice is a valid number
-  const formattedOriginalPrice = !isNaN(originalPriceNum) ? originalPriceNum.toFixed(2) : null;
+  const formattedOriginalPrice = !isNaN(originalPriceNum) ? originalPriceNum.toFixed() : null;
 
   return (
     <div className="rounded-lg space-y-2">
@@ -79,41 +79,6 @@ const Card = ({
     </div>
   );
 }
-
-
-
-interface CARD{
-  title: string;
-  imageSrc: string
-}
-const Card2 = ({ title, imageSrc }: CARD) => {
-  return (
-    <div className="relative group">
-      {/* Image */}
-      <Image
-        src={imageSrc}
-        alt={title}
-        width={400}
-        height={300}
-        className="w-full h-auto rounded-lg object-cover"
-      />
-      {/* Title */}
-      <p className="absolute bottom-3 left-3 text-black font-medium text-[16px] leading-[21.6px] font-satoshi">
-        {title}
-      </p>
-    </div>
-
-    
-  );
-}
-
-
-export default Card; Card2;
-
-
-
-
-
 
 
 
