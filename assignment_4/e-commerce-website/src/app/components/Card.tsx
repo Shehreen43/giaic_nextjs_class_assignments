@@ -13,7 +13,7 @@ interface CardProps {
   showDiscount?: boolean; // Optional: Flag to decide if discount is shown
 }
 
-export default function Card ({
+const Card = ({
   imageSrc,
   title,
   rating,
@@ -22,7 +22,7 @@ export default function Card ({
   discount = 0,
   showOriginalPrice = true, // Default to true if not passed
   showDiscount = true, // Default to true if not passed
-}: CardProps) {
+}: CardProps) => {
   const formattedPrice = price.toFixed();
 
   // Calculate full stars and half stars
@@ -52,7 +52,7 @@ export default function Card ({
       
       <div className="flex flex-row space-x-1  items-center">
          {/* Full Stars */}
-       {Array.from({ length: fullStars }).map((_, index) => (
+         {Array.from({ length: fullStars }).map((_, index) => (
         <Star key={index} />
        ))}
 
@@ -79,6 +79,15 @@ export default function Card ({
     </div>
   );
 }
+
+
+const Customers_Review =()=>{
+  return (<>
+         
+  </>)
+}
+
+export default Card;
 
 
 
