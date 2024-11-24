@@ -160,7 +160,7 @@ export default function New_Availabe() {
           OUR HAPPY CUSTOMERS
         </h1>
 
-          <TestimonialsSection />
+        <TestimonialsSection />
       </div>
     </>
   );

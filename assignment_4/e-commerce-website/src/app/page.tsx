@@ -3,6 +3,7 @@ import TopHeader from "./components/TopHeader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import New_Availabe from "./components/New-Availabe";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
     <Hero />
     <New_Availabe />
     </main>
-    
+    <Footer />
     </>
   )}
 
