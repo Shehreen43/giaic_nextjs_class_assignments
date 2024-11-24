@@ -21,6 +21,21 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        pulse: {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.7', transform: 'scale(1.05)' },
+        },
+      },
+      animation: {
+        rotate: 'rotate 1s linear',
+        pulse: 'pulse 2s ease-in-out infinite', // Customize duration and easing
+      },
+      
     },
   },
   plugins: [],
