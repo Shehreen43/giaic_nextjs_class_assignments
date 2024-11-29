@@ -93,7 +93,7 @@ export default function Footer() {
       {/* Bottom Section */}
       <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto text-sm text-gray-600">
         <p>Shop.co © 2000-2023, All Rights Reserved</p>
-        <div className="flex gap-4 mt-4 md:mt-0">
+        <div className="flex gap-2 mt-4 md:mt-0">
           <img src="/visa.svg" alt="Visa" />
           <img src="/mastercard.svg" alt="MasterCard" />
           <img src="/paypal.svg" alt="PayPal" />

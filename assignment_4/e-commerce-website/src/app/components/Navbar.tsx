@@ -4,9 +4,15 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="w-full bg-white flex flex-wrap justify-between items-center py-4 px-4 md:px-6 lg:px-10 shadow-sm">
+      {/* Mobile Menu (Optional Placeholder) */}
+      <div className="  md:hidden flex items-center">
+        <button aria-label="Open Menu">
+          <Image src="/menu.svg" alt="Menu" height={24} width={24} />
+        </button>
+      </div>
       {/* Logo */}
       <Link href="#">
-        <Image src="/SHOP.png" alt="Logo" height={22} width={160} />
+        <Image src="/SHOP.png" alt="Logo" height={22} width={120} />
       </Link>
 
       {/* Desktop Navigation */}
@@ -36,7 +42,7 @@ export default function Navbar() {
 
       {/* Search Bar */}
       <div className="hidden  md:flex  items-center bg-gray-100 rounded-full w-full md:w-auto px-4 py-2 mt-4 md:mt-0">
-        <Image src="/srch.svg" alt="Search" height={24} width={24} className="visible:inline-block" />
+        <Image src="/srch.svg" alt="Search" height={24} width={24} />
         <input
           type="text"
           placeholder="Search for products..."
@@ -45,21 +51,18 @@ export default function Navbar() {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex items-center space-x-4 mt-4 md:mt-0">
+      <div className="flex items-center space-x-2 mt-4 md:mt-0">
         <button>
           <Image src="/cart.svg" alt="Cart" height={24} width={24} />
         </button>
         <button>
           <Image src="/client.svg" alt="Client" height={24} width={24} />
         </button>
-      </div>
-
-      {/* Mobile Menu (Optional Placeholder) */}
-      <div className="md:hidden flex items-center">
-        <button aria-label="Open Menu">
-          <Image src="/menu.svg" alt="Menu" height={24} width={24} />
+        <button >
+          <Image src="/srch.svg" alt="Search" height={24} width={24} className="md:hidden" />
         </button>
       </div>
+
     </nav>
   );
 }
