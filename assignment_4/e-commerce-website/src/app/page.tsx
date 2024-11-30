@@ -35,19 +35,21 @@ import Image from "next/image";
 import TopHeader from "./components/TopHeader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import New_Availabe from "./components/New-Availabe";
+import New_Available from "./components/New-Available";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
     <TopHeader />
-    <Navbar />
+     <Navbar />
+     <Hero />
+  {/*
     <main>
     <Hero />
-    <New_Availabe />
+    <New_Available />
     </main>
-    <Footer />
+    <Footer /> */}
     </>
   )}
 

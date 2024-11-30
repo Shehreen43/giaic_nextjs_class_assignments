@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        integral: ['"Integral CF"', 'sans-serif'],
+      },
       maxWidth: {
         xs: '20rem', // 320px
         sm: '24rem', // 384px
