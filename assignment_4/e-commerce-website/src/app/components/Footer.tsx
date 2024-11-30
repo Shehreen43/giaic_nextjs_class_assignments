@@ -111,9 +111,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="absolute w-[1441px] h-[499px] top-[3871px] left-[-1px] gap-0 bg-[#F0F0F0] grid grid-cols-5">
+    <div className="absolute w-[1440px] h-[499px] top-[3871px] gap-0 bg-[#F0F0F0] grid grid-cols-5">
 
-      <div className="bg-black text-white top-[-90px]  w-[1240px] h-[180px] absolute  left-[100px] p-[36px_64px] gap-0 rounded-[20px]  flex justify-between">
+      <div className="bg-black text-white top-[-90px]  w-[1140px] h-[180px] absolute p-[36px_64px] left-[100px] gap-0 rounded-[20px]  flex justify-between">
         <div className="w-[551px] h-[94px] gap-0 font-integral text-[40px] font-bold leading-[45px] text-left">
           <h1>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
         </div>
@@ -278,7 +278,7 @@ export default function Footer() {
        
         <p className="absolute font-[Satoshi] text-[14px] font-normal leading-[18.9px] text-right underline decoration-slice decoration-0 w-[269px] h-[19px] left-[100px]">Shop.co © 2000-2023, All Rights Reserved</p>
 
-        <div className="flex items-center absolute w-[281.07px] h-[30.03px] left-[1020px]">
+        <div className="flex items-center absolute w-[281.07px] h-[30.03px] left-[1000px]">
           <img src="/visa.svg" alt="Visa" />
           <img src="/mastercard.svg" alt="MasterCard"  />
           <img src="/paypal.svg" alt="PayPal"  />

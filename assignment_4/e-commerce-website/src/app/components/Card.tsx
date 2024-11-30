@@ -158,13 +158,6 @@ const Card = ({
   );
 }
 
-
-const Customers_Review =()=>{
-  return (<>
-         
-  </>)
-}
-
 export default Card;
 
 

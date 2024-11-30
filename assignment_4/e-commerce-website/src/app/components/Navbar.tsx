@@ -3,7 +3,7 @@
 
 // export default function Navbar() {
 //   return (
-//     <nav className="w-full bg-white flex flex-wrap justify-between items-center py-4 px-4 md:px-6 lg:px-10 shadow-sm">
+//     <nav className="sm:w-full bg-white flex flex-wrap justify-between items-center py-4 px-4 md:px-6 lg:px-10 shadow-sm">
 //       {/* Mobile Menu (Optional Placeholder) */}
 //       <div className="  md:hidden flex items-center">
 //         <button aria-label="Open Menu">

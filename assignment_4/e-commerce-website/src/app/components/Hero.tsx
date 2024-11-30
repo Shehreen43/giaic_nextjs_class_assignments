@@ -56,7 +56,7 @@ export default function Hero() {
         <div className="absolute top-[431px] left-[750px] animate-rotate">
           <Image  src="/Vector.svg" alt="" width={56} height={56}  />
        </div>
-       <div className="absolute w-[104px] h-[104px] top-[220px] left-[1255px] gap-0 animate-rotate">
+       <div className="absolute w-[104px] h-[104px] top-[220px] left-[1215px] gap-0 animate-rotate">
        <Image  src="/Vector.svg" alt="" width={104} height={104}  />
 </div>
 <div className="">
@@ -64,7 +64,7 @@ export default function Hero() {
 </div>
 
 {/* w-[1440px] h-[122px] top-[797px]  */}
-<div className="w-[1440px] h-[122px] top-[797px]  bg-black">
+<div className="w-[1440px] h-[122px] top-[797px]  bg-black sm:grid sm:grid-cols-3">
 <Image  src="/VERSACE.svg" alt="" width={166.48} height={33.16} className="absolute top-[841px] left-[100px]" />
 
 <Image  src="ZARA.svg" alt="" width={91} height={38} className="absolute top-[839px] left-[372.48px]" />

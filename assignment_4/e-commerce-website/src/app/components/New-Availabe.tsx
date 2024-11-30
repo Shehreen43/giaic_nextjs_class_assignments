@@ -144,7 +144,7 @@ export default function New_Availabe() {
       <h1 className="absolute w-[1440px] h-[58px] top-[991px]  gap-0 text-center text-[48px] font-extrabold leading-[57.6px] font-integral text-black">
         NEW ARRIVALS
       </h1>
-      <div className="absolute top-[1110px] grid grid-cols-4 gap-6 left-[100px]">
+      <div className="absolute w-[1410px] top-[1110px] grid grid-cols-4 gap-6 px-10">
         <Card
           imageSrc="/img1.png"
           title="T-shirt with Tape Details"
@@ -192,7 +192,7 @@ export default function New_Availabe() {
         TOP SELLING
       </h1>
 
-      <div className="absolute top-[1841px] grid grid-cols-4 gap-6 left-[100px]">
+      <div className="absolute w-[1410px] top-[1841px] grid grid-cols-4 gap-6 px-10">
         <Card
           imageSrc="/img5.png"
           title="Vertical Striped Shirt"
@@ -234,7 +234,7 @@ export default function New_Availabe() {
         <p>View All</p>
       </button>
 
-      <div className="absolute w-[1239px] h-[866px] top-[2417px] left-[100px] gap-0 rounded-[40px] bg-[#F0F0F0]">
+      <div className="absolute w-[1239px] h-[866px] top-[2417px] px-10 gap-0 rounded-[40px] bg-[#F0F0F0]">
         <h1 className="relative h-[58px] top-[70px]  gap-0 text-center text-[48px] font-extrabold leading-[57.6px] font-integral text-black">
           BROWSE BY DRESS STYLE
         </h1>
@@ -291,7 +291,7 @@ export default function New_Availabe() {
         </div>
       </div>
       <div className="absolute top-[3363px]">
-        <h1 className="absolute w-[1440px]  h-[58px] gap-0 font-extrabold leading-[57.6px] font-integral text-black  left-[100px] text-[48px]">
+        <h1 className="absolute w-[1440px]  h-[58px] gap-0 font-extrabold leading-[57.6px] font-integral text-black  px-10 text-[48px]">
           OUR HAPPY CUSTOMERS
         </h1>
 

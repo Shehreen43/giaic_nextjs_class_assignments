@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-2 w-[1410px] px-10">
       {testimonials.map((testimonial, index) => (
         <TestimonialCard
           key={index}

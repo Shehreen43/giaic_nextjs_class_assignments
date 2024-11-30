@@ -55,7 +55,7 @@ const TestimonialCard = ({
 }: TestimonialCardProps) => {
     const fullStars = Math.floor(stars);
   return (
-    <div className="relative w-[400px] h-[230px] top-[100px] left-[100px] p-[28px_32px] gap-[342px] rounded-[20px] border-black border-2 border-opacity-40">
+    <div className="relative w-[400px] h-[250px] top-[100px] px-10 p-[28px_32px] gap-[342px] rounded-[20px] border-black border-2 border-opacity-40">
       <div className="space-y-3">
         {/* Stars */}
         <p className="flex flex-row space-x-1">
