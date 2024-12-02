@@ -44,6 +44,8 @@ export default function Home() {
     <TopHeader />
      <Navbar />
      <Hero />
+     <New_Available />
+     <Footer />
   {/*
     <main>
     <Hero />
